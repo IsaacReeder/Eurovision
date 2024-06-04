@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isaac Reeder</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/48446810?s=280&v=4" type="image/png">
+
+    
+</head>
+<body>
+    <header>
+        
+        <nav class="unique-navbar">
+            <div class="unique-left-section">
+                <button class="unique-pill-button">7 | 9 | 11 MAY - 21:00 CEST</button>
+            </div>
+            <div class="unique-center-logo">
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpix.eurovisionworld.com%2Fgrafik%2F2024%2Flogo%2Feurovision-2024-malmo.png&f=1&nofb=1&ipt=88731c410ec3ec0446ea1328e4d2eccfcbb37ece41bf6e8145154bfa64452525&ipo=images" alt="Logo" class="unique-logo">
+            </div>
+            <div class="unique-right-section">
+                <span class="unique-magnifying-glass">&#128269;</span> <!-- Unicode character for right-pointing magnifying glass -->
+                <button class="unique-pill-button">Junior Eurovision
+                </button>
+                <button class="unique-pill-button">Shop</button>
+            </div>
+        </nav>
+        <div class="unique-sub-navbar">
+            <span class="unique-nav-item">Latest</span>
+            <span class="unique-nav-item">Watch</span>
+            <span class="unique-nav-item">Stream 🎵</span>
+            <span class="unique-nav-item">Participants</span>
+            <span class="unique-nav-item">About</span>
+        </div>
+        <div class="unique-fullscreen-image">
+            <img src="https://eurovision.tv/sites/default/files/styles/hp_banner/public/media/image/2024-05/110524_Sarah%20Louisie%20Bennett_EBU_36347.jpg?h=ccf7211e&itok=U6Z-U-gF" alt="Eurovision" class="euro-logo">
+        </div>
+        
+    </header>
+    
+
+    <section id="features" class="section">
+
+        <!-- XSS Vuln -->
+        <h1>Sign Up to Our Email Newsletter</h1>
+        <form action="/signup" method="post" class="signup-form">
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" class="input-field"><br><br>
+            <input type="submit" value="Sign Up" class="submit-button">
+        </form>
+        
+       
+
+        <!-- Unrestricted File Upload -->
+
+        <div class="green" style="margin: 0.5em 0; font-family: GT Pressura, Arial, sans-serif; font-weight: 600; color: #038851; padding-top: 25px;">
+            Want to work with us? (Yes, of course you do)
+        </div>
+        
+        <h2>Please upload your resume below, and we'll be in touch.</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="file" class="file-input">
+            <input type="submit" value="Upload" class="submit-button">
+        </form>
+        
+        
+
+        <!-- Login -->
+
+
+        <div class="green" style="margin: 0.5em 0; font-family: GT Pressura, Arial, sans-serif; font-weight: 600; color: #038851; padding-top: 25px;">
+            Already have an account?
+        </div>
+        <h2>Please login... Legitimately, please.</h2>
+        <div class="log-body">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form action="/login" method="GET">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <hr>
+        <hr>        
+
+
+        <h2>Features</h2>
+        <p>Everything you need to manage your online orders efficiently.</p>
+        <div class="features">
+            <div class="feature">
+                <h3>Order Management</h3>
+                <p>Consolidate all your online orders in one place and manage them with ease.</p>
+            </div>
+            <div class="feature">
+                <h3>Integration</h3>
+                <p>Integrate seamlessly with your POS system and streamline operations.</p>
+            </div>
+            <div class="feature">
+                <h3>Analytics</h3>
+                <p>Get valuable insights into your sales and operations with our analytics tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Deliverect streamlines restaurant delivery operations by integrating multiple food delivery platforms into one easy-to-use dashboard. It helps restaurants efficiently manage orders from platforms like Uber Eats and DoorDash, reducing errors and improving customer satisfaction.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more information.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Deliverect Clone. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
